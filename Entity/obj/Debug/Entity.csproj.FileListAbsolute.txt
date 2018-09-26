@@ -1,0 +1,11 @@
+F:\Super_Zapatos\Entity\bin\Debug\Entity.dll
+F:\Super_Zapatos\Entity\bin\Debug\Entity.pdb
+F:\Super_Zapatos\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+F:\Super_Zapatos\Entity\obj\Debug\Entity.dll
+F:\Super_Zapatos\Entity\obj\Debug\Entity.pdb
+F:\Super_Zapatos\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+F:\PRACTICAS VB.NET\Super_Zapatos\Entity\bin\Debug\Entity.dll
+F:\PRACTICAS VB.NET\Super_Zapatos\Entity\bin\Debug\Entity.pdb
+F:\PRACTICAS VB.NET\Super_Zapatos\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+F:\PRACTICAS VB.NET\Super_Zapatos\Entity\obj\Debug\Entity.dll
+F:\PRACTICAS VB.NET\Super_Zapatos\Entity\obj\Debug\Entity.pdb

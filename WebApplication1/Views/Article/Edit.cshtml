@@ -1,0 +1,84 @@
+﻿
+@model Entity.Article
+
+@{
+    List<Entity.Store> list = ViewBag.Lista;
+  
+    
+
+}
+<div class="panel panel-default">
+   @if (ViewBag.respuesta != null)
+   {
+       string alerta = ViewBag.success ? "alert-success" : "alerta-danger";
+        <div class="alert @alerta">
+       
+        @ViewBag.respuesta;
+
+    </div>
+   }
+   
+    <div class="panel-heading" style="background: #46AEFE; color: #fff;">
+        <h2 style="text-align: center; font-family: Arial; font-weight: 700;">Edit Article</h2>
+    </div>
+    <div class="panel-body">
+        @using (Html.BeginForm("Save", "Article", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            <div class="form-horizontal">
+                <fieldset>
+                    <legend></legend>
+                    <div class="row" style="padding-bottom: 8px;">
+                        @Html.TextBoxFor(model => model.Id, new { @class = "form-control" })
+                        <div class="form-group col-md-6">
+                            @Html.Label("Name", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9 dropdown">
+                                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            @Html.Label("Description", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9 dropdown">
+                                @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 8px;">
+                        <div class="form-group col-md-6">
+                            @Html.Label("Price", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9 dropdown">
+                                @Html.TextBoxFor(model => model.Price, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            @Html.Label("Store", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9 dropdown">
+                                @Html.DropDownListFor(model => model.StoreId,new SelectList(list,"Id","Name"), new { @class = "form-control", @readonly = "readonly" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 8px;">
+                        <div class="form-group col-md-6">
+                            @Html.Label("Total Shelf", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9 dropdown">
+                                @Html.TextBoxFor(model => model.Total_In_Shelf, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            @Html.Label("Total Vault", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9 dropdown">
+                                @Html.TextBoxFor(model => model.Total_In_Vault, new { @class = "form-control", @readonly = "readonly" })
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+                <p>
+                    <div class="form-group col-md-2">
+                        <input type="submit" value="Save" class="btn btn-block btn-lg btn-primary" />
+                    </div>
+                </p>
+            </div>
+
+        }
+    </div>
+</div>

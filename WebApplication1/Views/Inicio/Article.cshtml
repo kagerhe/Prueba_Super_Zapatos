@@ -1,0 +1,146 @@
+﻿@using System.Collections
+@model Entity.Article
+@{
+
+    ViewBag.Pagina = "Articulo";
+    ViewBag.Item = "Index";
+    List<Entity.Article> lista = ViewBag.Lista;
+}
+
+<!-- Page Content -->
+<h1></h1>
+<hr>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">
+                        <a>
+                            @Html.ActionLink("Add New Article", "Add", "Article", new { @class = "btn btn-success" })
+                        </a>
+                    </h3>
+                </div>
+                <div class="row" style="margin-top:0; min-height:0;">
+                    <div class="content">
+                        <style>
+                            table tr > td:nth-child(1),
+                            table tr > td:nth-child(2),
+                            table tr > td:nth-child(5),
+                            table tr > td:nth-child(4) {
+                                text-align: center;
+                            }
+
+                            table tr > td:nth-child(3) {
+                                text-align: left;
+                            }
+                        </style>
+                        <div style="padding-left:15px; padding-right:15px">
+                            <table id="listArticle" class="table table-striped table-bordered nowrap" cellspacing="0" width="100">
+                                <thead>
+                                    <tr class="bg-primary" style="text-align:center">
+                                        <th style="text-align:center; width:5%">Id</th>
+                                        <th style="text-align:center; width:10%">Name</th>
+                                        <th style="text-align:center; width:10%">Description</th>
+                                        <th style="text-align:center; width:10%">Price</th>
+                                        <th style="text-align:center; width:15%">Total Shelf</th>
+                                        <th style="text-align:center; width:20%">Total Vault</th>
+                                        <th style="text-align:center; width:30%">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table">
+                                    @foreach (var a in lista)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @a.Id
+                                            </td>
+                                            <td>
+                                                @a.Name
+                                            </td>
+                                            <td>
+                                                @a.Description
+                                            </td>
+                                            <td>
+                                                @a.Price
+                                            </td>
+                                            <td>
+                                                @a.Total_In_Shelf
+                                            </td>
+                                            <td>
+                                                @a.Total_In_Vault
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Edit", "Edit", "Store", new { id = a.Id }, new { @class = "btn btn-success" })
+                                                @Html.ActionLink("Delete", "Delete", "Store", new { id = a.Id }, new { @class = "btn btn-success" })
+
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</section>
+
+@*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+<script src="~/Scripts/alertify.min.js"></script>
+<script src="~/Scripts/article.js"></script>
+
+@*modal*@
+<section style="display:none">
+    <form id="formStore" class="form-horizontal">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                @Html.Hidden("id")
+                <input type="hidden" id="idn" value="" class="form-control" />
+                <div class="form-group">
+                    @Html.Label("Store", new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @*@Html.DropDownList("selectStore", new SelectList(new List(Of Object), "Idn", "Name", "0"), "Seleccionar", new { @class = "form-control"})*@
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Name", new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBox("name", "", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group" style="padding-top:0">
+                    @Html.Label("Description", new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBox("description", "", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group" style="padding-top:0">
+                    @Html.Label("Price", new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBox("price", "", new { @class = "form-control" })
+
+                    </div>
+                </div>
+                <div class="form-group" style="padding-top:0">
+                    @Html.Label("Total In Shelf", new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBox("totalInShelf", "", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group" style="padding-top:0">
+                    @Html.Label("Total In Vault", new { @class = "control-label col-sm-4" })
+                    <div class="col-sm-8">
+                        @Html.TextBox("totalInVault", "", new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+@*modal*@
