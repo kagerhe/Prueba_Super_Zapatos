@@ -22,8 +22,7 @@ namespace Entity
         public float Price { get; set; }
         public float Total_In_Shelf { get; set; }
         public float Total_In_Vault { get; set; }
-        //   public int Store_Id { get; set; }
-        // public virtual Store Store { get; set; }
+       
 
     }
 }

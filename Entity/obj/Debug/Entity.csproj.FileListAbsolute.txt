@@ -9,3 +9,14 @@ F:\PRACTICAS VB.NET\Super_Zapatos\Entity\bin\Debug\Entity.pdb
 F:\PRACTICAS VB.NET\Super_Zapatos\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 F:\PRACTICAS VB.NET\Super_Zapatos\Entity\obj\Debug\Entity.dll
 F:\PRACTICAS VB.NET\Super_Zapatos\Entity\obj\Debug\Entity.pdb
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos2\Entity\bin\Debug\Entity.dll
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos2\Entity\bin\Debug\Entity.pdb
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos2\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos2\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos2\Entity\obj\Debug\Entity.dll
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos2\Entity\obj\Debug\Entity.pdb
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos3\Entity\bin\Debug\Entity.dll
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos3\Entity\bin\Debug\Entity.pdb
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos3\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos3\Entity\obj\Debug\Entity.dll
+F:\PRACTICAS VB.NET\sUPERZAPATOS3\Super_Zapatos3\Entity\obj\Debug\Entity.pdb

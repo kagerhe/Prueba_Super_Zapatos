@@ -9,6 +9,8 @@ using System.Web.Http;
 
 namespace WebApi2.Controllers
 {
+  
+
     [RoutePrefix("Services/Stores")]
     public class StoreController : ApiController
     {
@@ -17,8 +19,8 @@ namespace WebApi2.Controllers
 
         // GET: api/Store/
         [HttpGet]
+                [Route("All")]
         [AllowAnonymous]
-        [Route("All")]
         public HttpResponseMessage GetAllStores()
         {
             List<Store> list = StoreBusiness.GetStore();
@@ -33,8 +35,8 @@ namespace WebApi2.Controllers
 
         // GET: api/Store/5
         [HttpGet]
-        [AllowAnonymous]
         [Route("ById/{id}")]
+        [AllowAnonymous]
         public HttpResponseMessage GetStoreId(int id)
         {
             Store article = StoreBusiness.GetStoreById(ref id);
@@ -55,8 +57,8 @@ namespace WebApi2.Controllers
 
         // POST: api/Store
         [HttpPost]
-        [AllowAnonymous]
         [Route("Add")]
+        [AllowAnonymous]
         public HttpResponseMessage AddStore([FromBody()] Store store)
         {
             if ((ModelState.IsValid))
@@ -73,8 +75,9 @@ namespace WebApi2.Controllers
 
         // PUT: api/Store/5
         [HttpPut]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [Route("Edit/{id}")]
+        [AllowAnonymous]
         public HttpResponseMessage EditStore(int id, [FromBody()] Store store)
         {
             if ((store.Id.Equals(id)))
@@ -91,8 +94,8 @@ namespace WebApi2.Controllers
 
         // DELETE: api/Store/5
         [HttpDelete]
-        [AllowAnonymous]
         [Route("Delete/{id}")]
+        [AllowAnonymous]
         public HttpResponseMessage DeleteStore(int id)
         {
             if ((!id.Equals(0)))

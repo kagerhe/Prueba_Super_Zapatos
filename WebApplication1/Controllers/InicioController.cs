@@ -8,7 +8,7 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
-using WebApplication1.Models;
+
 
 namespace WebApplication1.Controllers
 {
@@ -19,10 +19,19 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-       
+
 
         public ActionResult Store()
         {
+
+            ViewData["Message"] = "Your contact page.";
+            return View();
+        }
+
+        public ActionResult Article()
+        {
+
+            ViewData["Message"] = "Your contact page.";
             return View();
         }
     }
